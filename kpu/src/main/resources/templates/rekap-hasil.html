@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Hasil Rekap | KPU</title>
+    <link href="webjars/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen"> </link>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body  style="padding-top:50px">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Demo</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/rekap-masuk">Rekap Masuk</a></li>
+            <li class="active"><a href="/rekap-hasil">Rekap Hasil</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+        <h1>Rekapitulasi</h1>
+        <div class="table-responsive">
+          <table class="table">
+                <thead>
+                        <tr>
+                        <th>Kandidat</th>
+                        <th>Jumlah Vote</th>
+                        </tr>
+                </thead>
+                <tbody>
+                  <tr th:each="recap : ${recaps}">
+                        <td th:text="${recap.getCandidate()}"></td>
+                        <td th:text="${recap.getNumVotes()}"></td>
+                  </tr>
+                </tbody>
+          </table>
+        </div>
+        <hr></hr>
+        <a href="/download_recap" class="btn btn-info" role="button">Download</a>
+    </div><!-- /.container -->
+  </body>
+</html>

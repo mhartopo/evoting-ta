@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="319.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.MainWindowController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="-6.0" prefHeight="342.0" prefWidth="465.0">
+         <children>
+            <Button layoutX="194.0" layoutY="292.0" mnemonicParsing="false" onAction="#vote" text="Pilih Kandidat" />
+            <RadioButton fx:id="cand1rb" layoutX="53.0" layoutY="238.0" mnemonicParsing="false" text="Muhtar H" />
+            <RadioButton fx:id="cand2rb" layoutX="189.0" layoutY="238.0" mnemonicParsing="false" text="Joko Widodo" />
+            <RadioButton fx:id="cand3rb" layoutX="312.0" layoutY="237.0" mnemonicParsing="false" text="Prabowo Subianto" />
+            <TextField fx:id="idTf" layoutX="104.0" layoutY="40.0" />
+            <Label layoutX="41.0" layoutY="44.0" text="Nomor Id" />
+            <ImageView fitHeight="128.0" fitWidth="149.0" layoutX="23.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/dummy.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="128.0" fitWidth="149.0" layoutX="170.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/dummy.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="128.0" fitWidth="149.0" layoutX="321.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/dummy.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

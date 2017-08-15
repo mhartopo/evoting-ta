@@ -1,0 +1,39 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.6.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	runtime('mysql:mysql-connector-java')
+	compile ('mysql:mysql-connector-java')
+	
+	compile("org.thymeleaf:thymeleaf-spring4")
+	compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
+	compile group: 'org.webjars', name: 'bootstrap', version: '3.3.5'
+	
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile files('lib/gson-2.6.2.jar')
+	compile files('lib/evote-server.jar')
+	
+}
